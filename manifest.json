@@ -1,0 +1,31 @@
+{
+  "name": "WebGuardian",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "description": "A minimal URL blocker to help you stay focused whilst working. Keep your attention!",
+
+  "action": {
+    "default_title": "WebGuardian"
+  },
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "author": "Bere Cephas",
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "short_name": "WebGuardian",
+  "permissions": ["declarativeNetRequest", "storage"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
